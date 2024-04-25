@@ -155,6 +155,7 @@ const students = [
   },
 ];
 app.use(express.json());
+app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
