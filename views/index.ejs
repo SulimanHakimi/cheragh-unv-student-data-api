@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cheragh | Sudent Cards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="continair w-full h-fit py-20 flex justify-center items-center">
+      <div class="cardList grid grid-cols-3 gap-10">
+        <% data.forEach((item)=>{%> 
+        <div
+          class="card flex-col flex rounded-xl p-2 justify-center items-center text-center shadow-2xl"
+        >
+          <div class="nav-card gap-1 flex items-center justify-center">
+            <img
+              class="w-20 border-l-4 border-b-4 p-1 border-neutral-300 rounded-full"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2xoC2kX3MjXS_TVKTHvbz-RbjNijxQjRTgBwQ-weFOg&s"
+              alt=""
+            />
+            <div class="flex flex-col">
+              <p class="text-base font-medium">CHERAGH</p>
+              <p class="text-sm border-t-2 border-t-neutral-300 font-medium">
+                موسسه تحصیلات عالی طبی چراغ
+              </p>
+            </div>
+          </div>
+          <div class="main flex justify-center gap-1 items-center flex-col">
+            <img
+              class="w-24 h-24 rounded-full"
+              src=<%= item.profile %>
+              alt=""
+            />
+            <div class="flex flex-col gap-1">
+              <h4 class="font-semibold"><%= item.name %></h4>
+              <p class="bg-cyan-600 px-10 text-white font-bold rounded-xl">
+                Pharmacy
+              </p>
+              <p class="font-medium text-sm">فارمسی</p>
+              <span class="font-semibold text-sm">ID: <%= item.id %></span>
+              <span class="font-semibold text-sm"
+                >Expire Date: 24-sep-2027</span
+              >
+              <p class="bg-cyan-800 px-10 text-yellow-900 rounded-sm">
+                <%= item.role  %>
+              </p>
+            </div>
+          </div>
+          <div class="footer">
+            <a class="text-sm pl-20" href="">www.cheragh.edu.af</a>
+          </div>
+        </div>
+        <%})%> 
+      </div>
+    </div>
+  </body>
+</html>
