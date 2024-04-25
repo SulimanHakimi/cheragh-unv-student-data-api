@@ -4,6 +4,16 @@ const app = express();
 const PORT = 3000;
 const students = [
   {
+    id: "F1402PHA01995",
+    name: "Suliman",
+    fatherName: "Mirzamohammad",
+    faculty: "Pharmacy",
+    semester: "Second",
+    role:"STUDENT",
+    Province: "LOGAR",
+    profile: `https://mis.cheragh.edu.af/_uploads_/user/umis_6896_1692344765.jpg`,
+  },
+  {
     id: "F1402PHM02003",
     name: "Ahmad Elham",
     fatherName: "Naqibullah",
@@ -142,16 +152,6 @@ const students = [
     Province: "PANJSHIR",
     role:"STUDENT",
     profile: `https://mis.cheragh.edu.af/_uploads_/user/umis_7871_1692338550.jpg`,
-  },
-  {
-    id: "F1402PHA01995",
-    name: "Suliman",
-    fatherName: "Mirzamohammad",
-    faculty: "Pharmacy",
-    semester: "Second",
-    role:"STUDENT",
-    Province: "LOGAR",
-    profile: `https://mis.cheragh.edu.af/_uploads_/user/umis_6896_1692344765.jpg`,
   },
 ];
 app.use(express.json());
