@@ -11,7 +11,9 @@
           extend: {
             colors: {
               clifford: '#da373d',
-            }
+            }, backgroundImage: {
+                   'bg-card': "url('https://i.pinimg.com/originals/83/59/8a/83598a5ab3f5371e7662b565836c0c39.jpg')",
+      }
           },screens: {
       'sm': '640px',
       'md': '768px',
@@ -28,7 +30,7 @@
       <div class="cardList grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         <% data.forEach((item)=>{%> 
         <div
-          class="card flex-col flex rounded-xl p-2 justify-center items-center text-center shadow-2xl"
+          class="card flex-col flex bg-cover bg-center bg-bg-card rounded-xl  justify-center items-center text-center shadow-2xl"
         >
           <div class="nav-card gap-1 flex items-center justify-center">
             <img
@@ -59,7 +61,7 @@
               <span class="font-semibold text-sm"
                 >Expire Date: 24-sep-2027</span
               >
-              <p class="bg-cyan-800 px-10 text-yellow-900 rounded-sm">
+              <p class="bg-cyan-800 px-10 text-yellow-700 rounded-sm">
                 <%= item.role  %>
               </p>
             </div>
